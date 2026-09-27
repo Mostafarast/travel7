@@ -1,1022 +1,219 @@
-[9/27/2026 10:29 AM] Madrid: <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>آسمان | آغاز یک سفر متفاوت</title>
-
-<meta name="description" content="آژانس مسافرتی آسمان؛ رزرو تور، بلیط هواپیما و برنامه‌ریزی سفر">
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-
-<style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
-html{
-    scroll-behavior:smooth;
-}
-
-body{
-    font-family:'Vazirmatn',sans-serif;
-    background:#f7f9fc;
-    color:#172033;
-    line-height:1.8;
-}
-
-a{
-    text-decoration:none;
-    color:inherit;
-}
-
-.container{
-    width:min(1180px,92%);
-    margin:auto;
-}
-
-/* HEADER */
-
-header{
-    position:fixed;
-    top:0;
-    right:0;
-    left:0;
-    z-index:1000;
-    background:rgba(255,255,255,.94);
-    backdrop-filter:blur(15px);
-    border-bottom:1px solid rgba(0,0,0,.06);
-}
-
-.nav{
-    height:78px;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    gap:30px;
-}
-
-.logo{
-    font-size:28px;
-    font-weight:800;
-    color:#087f8c;
-}
-
-.logo span{
-    color:#172033;
-}
-
-.menu{
-    display:flex;
-    align-items:center;
-    gap:28px;
-}
-
-.menu a{
-    font-size:15px;
-    font-weight:600;
-    transition:.3s;
-}
-
-.menu a:hover{
-    color:#087f8c;
-}
-
-.nav-btn{
-    background:#087f8c;
-    color:white;
-    padding:11px 20px;
-    border-radius:12px;
-}
-
-.nav-btn:hover{
-    background:#066b76 !important;
-    color:white !important;
-}
-
-/* HERO */
-
-.hero{
-    min-height:720px;
-    padding-top:78px;
-    position:relative;
-    overflow:hidden;
-    display:flex;
-    align-items:center;
-    color:white;
-    background:
-    linear-gradient(120deg,rgba(4,25,42,.88),rgba(7,102,113,.55)),
-    url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1800&q=85")
-    center/cover;
-}
-
-.hero-content{
-    max-width:720px;
-    position:relative;
-    z-index:2;
-}
-
-.badge{
-    display:inline-block;
-    padding:7px 15px;
-    border-radius:50px;
-    background:rgba(255,255,255,.15);
-    border:1px solid rgba(255,255,255,.25);
-    margin-bottom:20px;
-    font-size:14px;
-}
-
-.hero h1{
-    font-size:clamp(42px,6vw,76px);
-    line-height:1.2;
-    font-weight:800;
-    margin-bottom:20px;
-}
-
-.hero h1 span{
-    color:#55d6d2;
-}
-
-.hero p{
-    font-size:19px;
-    max-width:620px;
-    color:#eefbfc;
-    margin-bottom:32px;
-}
-
-.hero-buttons{
-    display:flex;
-    gap:14px;
-    flex-wrap:wrap;
-}
-
-.btn{
-    display:inline-flex;
-    align-items:center;
-    justify-content:center;
-    padding:13px 25px;
-    border-radius:12px;
-    font-weight:700;
-    transition:.3s;
-}
-
-.btn-primary{
-    background:#55d6d2;
-    color:#07343a;
-}
-
-.btn-primary:hover{
-    transform:translateY(-3px);
-}
-
-.btn-outline{
-    border:1px solid rgba(255,255,255,.5);
-    color:white;
-    background:rgba(255,255,255,.08);
-}
-
-.btn-outline:hover{
-    background:white;
-    color:#087f8c;
-}
-
-/* SEARCH BOX */
-
-.search-box{
-    background:white;
-    color:#172033;
-    width:min(1000px,92%);
-    margin:-65px auto 0;
-    position:relative;
-    z-index:5;
-    border-radius:20px;
-    padding:25px;
-    box-shadow:0 20px 50px rgba(20,40,60,.13);
-}
-
-.search-title{
-    font-size:21px;
-    font-weight:800;
-    margin-bottom:18px;
-}
-
-.search-grid{
-    display:grid;
-    grid-template-columns:repeat(4,1fr) auto;
-    gap:12px;
-}
-
-.field{
-    border:1px solid #e1e7ee;
-    border-radius:11px;
-    padding:12px 15px;
-    background:#fafbfd;
-}
-
-.field label{
-    display:block;
-    font-size:12px;
-    color:#758092;
-    margin-bottom:2px;
-}
-
-.field input,
-.field select{
-    width:100%;
-    border:0;
-    outline:0;
-    background:transparent;
-    font-family:inherit;
-    font-size:14px;
-    color:#172033;
-}
-[9/27/2026 10:29 AM] Madrid: .search-btn{
-    border:0;
-    cursor:pointer;
-    padding:0 22px;
-    border-radius:11px;
-    background:#087f8c;
-    color:white;
-    font-family:inherit;
-    font-weight:700;
-}
-
-/* SECTIONS */
-
-section{
-    padding:90px 0;
-}
-
-.section-head{
-    text-align:center;
-    margin-bottom:45px;
-}
-
-.section-head .small{
-    color:#087f8c;
-    font-weight:700;
-    font-size:14px;
-}
-
-.section-head h2{
-    font-size:36px;
-    margin:5px 0 10px;
-}
-
-.section-head p{
-    color:#6b7585;
-}
-
-/* DESTINATIONS */
-
-.destinations{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:20px;
-}
-
-.destination{
-    height:300px;
-    border-radius:20px;
-    overflow:hidden;
-    position:relative;
-    color:white;
-    background-size:cover;
-    background-position:center;
-    transition:.4s;
-}
-
-.destination:hover{
-    transform:translateY(-7px);
-}
-
-.destination:after{
-    content:"";
-    position:absolute;
-    inset:0;
-    background:linear-gradient(transparent 35%,rgba(0,0,0,.78));
-}
-
-.destination-content{
-    position:absolute;
-    z-index:2;
-    bottom:20px;
-    right:20px;
-    left:20px;
-}
-
-.destination h3{
-    font-size:22px;
-}
-
-.destination p{
-    font-size:13px;
-    opacity:.9;
-}
-
-/* TOURS */
-
-.tours{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:24px;
-}
-
-.tour{
-    background:white;
-    border-radius:18px;
-    overflow:hidden;
-    box-shadow:0 8px 30px rgba(30,50,70,.08);
-    transition:.3s;
-}
-
-.tour:hover{
-    transform:translateY(-6px);
-}
-
-.tour-img{
-    height:210px;
-    background-size:cover;
-    background-position:center;
-}
-
-.tour-body{
-    padding:22px;
-}
-
-.tour-tag{
-    display:inline-block;
-    font-size:12px;
-    background:#e5f7f7;
-    color:#087f8c;
-    padding:4px 10px;
-    border-radius:20px;
-    margin-bottom:10px;
-}
-
-.tour h3{
-    font-size:20px;
-    margin-bottom:8px;
-}
-
-.tour p{
-    color:#707a88;
-    font-size:14px;
-}
-
-.tour-footer{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    margin-top:18px;
-}
-
-.price{
-    color:#087f8c;
-    font-weight:800;
-}
-
-/* SERVICES */
-
-.services{
-    background:#eef7f8;
-}
-
-.service-grid{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:20px;
-}
-
-.service{
-    background:white;
-    padding:30px 22px;
-    border-radius:18px;
-    text-align:center;
-}
-
-.icon{
-    width:60px;
-    height:60px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    background:#e2f7f6;
-    color:#087f8c;
-    border-radius:18px;
-    font-size:28px;
-    margin:0 auto 18px;
-}
-
-.service h3{
-    margin-bottom:8px;
-}
-
-.service p{
-    font-size:14px;
-    color:#707a88;
-}
-
-/* ABOUT */
-
-.about{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:60px;
-    align-items:center;
-}
-
-.about-img{
-    min-height:430px;
-    border-radius:25px;
-    background:
-    url("https://images.unsplash.com/photo-1527631746610-bca00a040d60?auto=format&fit=crop&w=1000&q=85")
-    center/cover;
-}
-
-.about-text .small{
-    color:#087f8c;
-    font-weight:700;
-}
-
-.about-text h2{
-    font-size:38px;
-    margin:8px 0 20px;
-}
-
-.about-text p{
-    color:#697383;
-    margin-bottom:20px;
-}
-
-.stats{
-    display:flex;
-    gap:35px;
-    margin-top:25px;
-}
-
-.stat strong{
-    display:block;
-    font-size:28px;
-    color:#087f8c;
-}
-
-.stat span{
-    font-size:13px;
-    color:#737c89;
-}
-
-/* CTA */
-
-.cta{
-    background:linear-gradient(120deg,#063f49,#087f8c);
-    color:white;
-    text-align:center;
-    border-radius:25px;
-    padding:65px 25px;
-}
-
-.cta h2{
-    font-size:38px;
-    margin-bottom:12px;
-}
-
-.cta p{
-    opacity:.9;
-    margin-bottom:25px;
-}
-
-/* FOOTER */
-
-footer{
-    background:#101923;
-    color:white;
-    padding:60px 0 25px;
-}
-
-.footer-grid{
-    display:grid;
-    grid-template-columns:2fr 1fr 1fr 1fr;
-    gap:40px;
-}
-
-.footer-brand p{
-    color:#aab4c0;
-    margin-top:15px;
-    max-width:350px;
-}
-
-footer h3{
-    margin-bottom:18px;
-}
-
-footer ul{
-    list-style:none;
-}
-
-footer li{
-    margin-bottom:10px;
-    color:#aab4c0;
-    font-size:14px;
-}
-
-footer li:hover{
-    color:#55d6d2;
-}
-[9/27/2026 10:29 AM] Madrid: .copyright{
-    border-top:1px solid rgba(255,255,255,.08);
-    margin-top:40px;
-    padding-top:20px;
-    text-align:center;
-    color:#8793a1;
-    font-size:13px;
-}
-
-/* MOBILE */
-
-@media(max-width:900px){
-
-    .menu{
-        display:none;
-    }
-
-    .search-grid{
-        grid-template-columns:1fr 1fr;
-    }
-
-    .search-btn{
-        min-height:50px;
-    }
-
-    .destinations{
-        grid-template-columns:1fr 1fr;
-    }
-
-    .tours{
-        grid-template-columns:1fr 1fr;
-    }
-
-    .service-grid{
-        grid-template-columns:1fr 1fr;
-    }
-
-    .about{
-        grid-template-columns:1fr;
-    }
-
-    .footer-grid{
-        grid-template-columns:1fr 1fr;
-    }
-}
-
-@media(max-width:600px){
-
-    .nav{
-        height:68px;
-    }
-
-    .hero{
-        min-height:650px;
-        padding-top:68px;
-    }
-
-    .hero h1{
-        font-size:42px;
-    }
-
-    .hero p{
-        font-size:16px;
-    }
-
-    .search-box{
-        margin:-35px auto 0;
-    }
-
-    .search-grid{
-        grid-template-columns:1fr;
-    }
-
-    .destinations,
-    .tours,
-    .service-grid,
-    .footer-grid{
-        grid-template-columns:1fr;
-    }
-
-    section{
-        padding:65px 0;
-    }
-
-    .section-head h2{
-        font-size:29px;
-    }
-
-    .about-text h2{
-        font-size:30px;
-    }
-
-    .stats{
-        gap:20px;
-    }
-}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="آژانس مسافرتی آسمان؛ رزرو تور، اقامت و تجربه سفرهای به‌یادماندنی در ایران و جهان.">
+  <meta name="theme-color" content="#0b6477">
+  <title>آژانس مسافرتی آسمان | سفر از همین‌جا شروع می‌شود</title>
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root { --ink:#102a35; --muted:#60727a; --teal:#0b6477; --teal-dark:#084b5a; --gold:#f3b33d; --paper:#f7fbfb; --white:#fff; --line:#dce9e9; --shadow:0 16px 42px rgba(17,72,82,.12); }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; font-family:Vazirmatn, Tahoma, sans-serif; color:var(--ink); background:var(--paper); line-height:1.8; }
+    a { color:inherit; text-decoration:none; }
+    img { display:block; max-width:100%; }
+    .container { width:min(1140px, calc(100% - 40px)); margin:auto; }
+    .section { padding:88px 0; }
+    .section-head { display:flex; align-items:end; justify-content:space-between; gap:24px; margin-bottom:34px; }
+    .eyebrow { display:block; margin-bottom:6px; color:var(--teal); font-size:.88rem; font-weight:800; }
+    h1,h2,h3,p { margin-top:0; }
+    h2 { margin-bottom:0; font-size:clamp(1.55rem, 3vw, 2.2rem); line-height:1.4; }
+    .section-head p { max-width:480px; margin:0; color:var(--muted); }
+    .btn { display:inline-flex; justify-content:center; align-items:center; gap:9px; border:1px solid transparent; border-radius:7px; padding:12px 20px; font:700 .95rem inherit; cursor:pointer; transition:transform .22s ease, background .22s ease, box-shadow .22s ease; }
+    .btn:hover { transform:translateY(-3px); box-shadow:0 10px 22px rgba(8,75,90,.2); }
+    .btn-primary { background:var(--gold); color:#382601; }
+    .btn-primary:hover { background:#ffc557; }
+    .btn-light { color:var(--white); border-color:rgba(255,255,255,.6); background:rgba(255,255,255,.12); }
+    .btn-light:hover { background:var(--white); color:var(--teal-dark); }
+    .btn-outline { color:var(--teal); border-color:var(--teal); }
+    .btn-outline:hover { background:var(--teal); color:#fff; }
+    .site-header { position:absolute; z-index:10; left:0; right:0; padding:18px 0; color:#fff; }
+    .nav { display:flex; align-items:center; justify-content:space-between; gap:22px; }
+    .brand { display:flex; align-items:center; gap:10px; font-size:1.18rem; font-weight:800; white-space:nowrap; }
+    .brand-mark { display:grid; place-items:center; width:37px; height:37px; border:2px solid var(--gold); border-radius:50% 50% 50% 7px; color:var(--gold); font-size:1.1rem; transform:rotate(-18deg); }
+    .nav-links { display:flex; align-items:center; gap:24px; font-size:.9rem; font-weight:600; }
+    .nav-links a { opacity:.88; transition:opacity .2s, color .2s; }
+    .nav-links a:hover { opacity:1; color:var(--gold); }
+    .menu-toggle { display:none; color:#fff; border:0; background:transparent; font:inherit; font-size:1.5rem; cursor:pointer; }
+    .hero { position:relative; min-height:720px; display:flex; align-items:center; overflow:hidden; color:#fff; background:#06323d; }
+    .hero::after { content:""; position:absolute; inset:0; z-index:0; background:linear-gradient(90deg, rgba(6,45,57,.86), rgba(6,45,57,.42)); }
+    .hero-video { position:absolute; z-index:0; inset:0; width:100%; height:100%; object-fit:cover; object-position:center; }
+    .hero-content { position:relative; z-index:1; width:min(710px, 100%); padding-top:88px; }
+    .hero .eyebrow { color:#ffe0a0; }
+    h1 { font-size:clamp(2.4rem, 5vw, 4.55rem); line-height:1.28; margin-bottom:18px; letter-spacing:0; }
+    .hero p { max-width:600px; margin-bottom:30px; color:rgba(255,255,255,.9); font-size:1.05rem; }
+    .hero-actions { display:flex; flex-wrap:wrap; gap:12px; }
+    .trust-bar { position:relative; z-index:2; margin-top:-49px; }
+    .trust-inner { display:grid; grid-template-columns:repeat(3, 1fr); padding:19px 28px; background:#fff; border-radius:7px; box-shadow:var(--shadow); }
+    .trust-item { display:flex; align-items:center; justify-content:center; gap:10px; padding:4px 18px; border-left:1px solid var(--line); color:var(--muted); font-size:.9rem; }
+    .trust-item:last-child { border:0; }
+    .trust-item strong { color:var(--ink); display:block; font-size:1rem; }
+    .icon { color:var(--teal); font-size:1.35rem; line-height:1; }
+    .destinations { display:grid; grid-template-columns:repeat(3,1fr); gap:20px; }
+    .destination { position:relative; min-height:330px; overflow:hidden; border-radius:7px; isolation:isolate; color:#fff; box-shadow:0 7px 22px rgba(16,42,53,.1); }
+    .destination::after { content:""; position:absolute; inset:0; z-index:-1; background:linear-gradient(0deg, rgba(7,35,44,.82), transparent 64%); }
+    .destination img { position:absolute; z-index:-2; inset:0; width:100%; height:100%; object-fit:cover; transition:transform .5s ease; }
+    .destination:hover img { transform:scale(1.07); }
+    .destination-content { position:absolute; bottom:0; left:0; right:0; padding:22px; }
+    .destination-content h3 { margin:0; font-size:1.3rem; }
+    .destination-content span { color:#ecf7f7; font-size:.88rem; }
+    .tours { background:#eaf5f4; }
+    .tour-grid { display:grid; grid-template-columns:repeat(3, 1fr); gap:20px; }
+    .tour-card { overflow:hidden; background:#fff; border:1px solid #e2eeee; border-radius:7px; transition:transform .22s ease, box-shadow .22s ease; }
+    .tour-card:hover { transform:translateY(-7px); box-shadow:var(--shadow); }
+    .tour-card img { width:100%; height:195px; object-fit:cover; }
+    .tour-body { padding:19px; }
+    .tag { display:inline-block; padding:3px 9px; border-radius:3px; background:#edf8f7; color:var(--teal); font-size:.78rem; font-weight:700; }
+    .tour-body h3 { margin:9px 0 5px; font-size:1.15rem; }
+    .tour-meta { color:var(--muted); font-size:.84rem; }
+    .tour-footer { display:flex; align-items:center; justify-content:space-between; gap:12px; margin-top:15px; padding-top:13px; border-top:1px solid #ecf1f1; }
+    .price { color:var(--teal-dark); font-size:.9rem; font-weight:800; }
+    .price b { font-size:1.12rem; }
+    .text-link { color:var(--teal); font-weight:800; font-size:.88rem; }
+    .services { display:grid; grid-template-columns:repeat(4, 1fr); gap:16px; }
+    .service { padding:23px 18px; background:#fff; border:1px solid var(--line); border-radius:7px; transition:border-color .2s, transform .2s, box-shadow .2s; }
+    .service:hover { border-color:#82b8bf; transform:translateY(-4px); box-shadow:0 10px 22px rgba(17,72,82,.08); }
+    .service .icon { display:grid; place-items:center; width:43px; height:43px; margin-bottom:13px; background:#e7f5f3; border-radius:6px; }
+    .service h3 { margin-bottom:5px; font-size:1.03rem; }
+    .service p { margin:0; color:var(--muted); font-size:.85rem; line-height:1.8; }
+    .about { color:#fff; background:var(--teal-dark); }
+    .about-grid { display:grid; grid-template-columns:1fr 1fr; gap:55px; align-items:center; }
+    .about-image { min-height:380px; border-radius:7px; background:url('https://images.unsplash.com/photo-1503220317375-aaad61436b1b?auto=format&fit=crop&w=1100&q=85') center/cover; }
+    .about .eyebrow { color:#ffd578; }
+    .about p { color:#d4e7e9; }
+    .checks { display:grid; grid-template-columns:1fr 1fr; gap:10px; padding:0; margin:24px 0 0; list-style:none; font-size:.9rem; }
+    .checks li::before { content:'✓'; display:inline-grid; place-items:center; width:20px; height:20px; margin-left:7px; border-radius:50%; background:rgba(243,179,61,.18); color:var(--gold); font-weight:800; }
+    .contact-grid { display:grid; grid-template-columns:.9fr 1.1fr; gap:28px; }
+    .contact-info { padding:32px; border-radius:7px; background:linear-gradient(135deg, var(--teal), #0d8390); color:#fff; }
+    .contact-info h2 { margin-bottom:10px; }
+    .contact-info > p { color:#d9f1f1; }
+    .contact-list { display:grid; gap:14px; margin:24px 0; }
+    .contact-row { display:flex; align-items:center; gap:12px; color:#fff; direction:ltr; text-align:right; }
+    .contact-row .icon { display:grid; place-items:center; width:37px; height:37px; border-radius:5px; color:#fff; background:rgba(255,255,255,.16); }
+    .contact-row small { display:block; color:#d4eeee; direction:rtl; font-size:.76rem; }
+    .contact-actions { display:flex; flex-wrap:wrap; gap:10px; }
+    .contact-actions .btn { flex:1; min-width:140px; }
+    .contact-actions .btn-primary { background:#fff; color:var(--teal-dark); }
+    .contact-actions .whatsapp { background:#25d366; color:#073f22; }
+    .contact-actions .whatsapp:hover { background:#41dd7a; }
+    .contact-form { padding:30px; border:1px solid var(--line); border-radius:7px; background:#fff; }
+    .contact-form h3 { margin-bottom:18px; font-size:1.3rem; }
+    .form-grid { display:grid; grid-template-columns:1fr 1fr; gap:13px; }
+    label { display:block; color:#4d626a; font-size:.83rem; font-weight:700; }
+    input, textarea { width:100%; margin-top:5px; padding:11px 12px; border:1px solid #cfdfdf; border-radius:5px; outline:0; font:inherit; font-size:.9rem; color:var(--ink); background:#fbfdfd; transition:border-color .2s, box-shadow .2s; }
+    input:focus, textarea:focus { border-color:var(--teal); box-shadow:0 0 0 3px rgba(11,100,119,.1); }
+    textarea { min-height:94px; resize:vertical; }
+    .field-full { grid-column:1/-1; }
+    .contact-form .btn { margin-top:17px; }
+    footer { padding:25px 0; color:#cadbde; background:#082e38; }
+    .footer-inner { display:flex; align-items:center; justify-content:space-between; gap:18px; font-size:.84rem; }
+    .footer-links { display:flex; gap:17px; }
+    .footer-links a:hover { color:var(--gold); }
+    .reveal { opacity:0; transform:translateY(18px); transition:opacity .6s ease, transform .6s ease; }
+    .reveal.visible { opacity:1; transform:none; }
+    @media (max-width:860px) { .nav-links { gap:15px; } .services { grid-template-columns:repeat(2,1fr); } .about-grid,.contact-grid { grid-template-columns:1fr; gap:30px; } .about-image { min-height:300px; order:2; } }
+    @media (max-width:680px) { .container { width:min(100% - 28px, 1140px); } .site-header { padding:14px 0; } .menu-toggle { display:block; } .nav-links { position:absolute; top:63px; right:14px; left:14px; display:none; flex-direction:column; align-items:stretch; gap:0; padding:8px; border-radius:7px; background:#083d49; box-shadow:var(--shadow); } .nav-links.open { display:flex; } .nav-links a { padding:10px 12px; } .nav .btn { display:none; } .hero { min-height:650px; background-position:58% center; } .hero-content { padding-top:82px; } .trust-bar { margin-top:-30px; } .trust-inner { grid-template-columns:1fr; padding:10px 17px; } .trust-item { justify-content:flex-start; border:0; border-bottom:1px solid var(--line); padding:9px 0; } .trust-item:last-child { border-bottom:0; } .section { padding:62px 0; } .section-head { display:block; margin-bottom:25px; } .section-head p { margin-top:8px; } .destinations,.tour-grid { grid-template-columns:1fr; } .destination { min-height:270px; } .services { grid-template-columns:1fr; } .checks,.form-grid { grid-template-columns:1fr; } .field-full { grid-column:auto; } .contact-info,.contact-form { padding:24px 19px; } .footer-inner { flex-direction:column; text-align:center; } }
+  </style>
 </head>
-
 <body>
-
-<header>
-<div class="container nav">
-
-<a href="#" class="logo">آسمان <span>✈</span></a>
-
-<nav class="menu">
-<a href="#home">صفحه اصلی</a>
-<a href="#tours">تورهای ویژه</a>
-<a href="#destinations">مقاصد</a>
-<a href="#services">خدمات</a>
-<a href="#about">درباره ما</a>
-<a href="#contact" class="nav-btn">تماس با ما</a>
-</nav>
-
-</div>
-</header>
-
-<main>
-
-<!-- HERO -->
-
-<section class="hero" id="home">
-
-<div class="container">
-
-<div class="hero-content">
-
-<div class="badge">✈ سفر، تجربه‌ای فراتر از مقصد</div>
-
-<h1>
-آغاز یک <span>سفر متفاوت</span>
-</h1>
-
-<p>
-با آسمان، مقصد بعدی شما فقط یک نقطه روی نقشه نیست؛
-شروع یک تجربه تازه، خاطره‌انگیز و فراموش‌نشدنی است.
-</p>
-
-<div class="hero-buttons">
-<a href="#tours" class="btn btn-primary">مشاهده تورها</a>
-<a href="#destinations" class="btn btn-outline">کشف مقاصد</a>
-</div>
-
-</div>
-
-</div>
-</section>
-
-<!-- SEARCH -->
-
-<div class="search-box">
-
-<div class="search-title">جستجوی سفر</div>
-
-<div class="search-grid">
-
-<div class="field">
-<label>مبدا</label>
-<input type="text" placeholder="مثلاً تهران">
-</div>
-
-<div class="field">
-<label>مقصد</label>
-<input type="text" placeholder="مثلاً استانبول">
-</div>
-
-<div class="field">
-<label>نوع سفر</label>
-<select>
-<option>تور</option>
-<option>بلیط هواپیما</option>
-<option>هتل</option>
-</select>
-</div>
-
-<div class="field">
-<label>تاریخ سفر</label>
-<input type="date">
-</div>
-
-<button class="search-btn" onclick="searchTravel()">جستجو</button>
-
-</div>
-</div>
-
-<!-- DESTINATIONS -->
-
-<section id="destinations">
-
-<div class="container">
-
-<div class="section-head">
-<div class="small">مقصد بعدی شما</div>
-<h2>مقاصد محبوب</h2>
-<p>شهرهایی که ارزش تجربه کردن دارند</p>
-</div>
-
-<div class="destinations">
-
-<a class="destination" href="#tours"
-style="background-image:url('https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?auto=format&fit=crop&w=900&q=85')">
-<div class="destination-content">
-<h3>استانبول</h3>
-<p>ترکیه · شهر دو قاره</p>
-</div>
-</a>
-
-<a class="destination" href="#tours"
-style="background-image:url('https://images.unsplash.com/photo-1539650116574-75c0c6d73f6e?auto=format&fit=crop&w=900&q=85')">
-<div class="destination-content">
-<h3>دبی</h3>
-<p>امارات · شهر آینده</p>
-</div>
-</a>
-
-<a class="destination" href="#tours"
-style="background-image:url('https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=900&q=85')">
-<div class="destination-content">
-<h3>پاریس</h3>
-<p>فرانسه · شهر عشق</p>
-</div>
-</a>
-
-<a class="destination" href="#tours"
-style="background-image:url('https://images.unsplash.com/photo-1552832230-c0197dd311b5?auto=format&fit=crop&w=900&q=85')">
-<div class="destination-content">
-<h3>رم</h3>
-<p>ایتالیا · تاریخ در قلب اروپا</p>
-</div>
-</a>
-
-</div>
-</div>
-</section>
-
-<!-- TOURS -->
-[9/27/2026 10:29 AM] Madrid: <section id="tours" style="background:#fff">
-
-<div class="container">
-
-<div class="section-head">
-<div class="small">پیشنهادهای آسمان</div>
-<h2>تورهای ویژه</h2>
-<p>چند پیشنهاد برای شروع یک سفر جذاب</p>
-</div>
-
-<div class="tours">
-
-<div class="tour">
-
-<div class="tour-img"
-style="background-image:url('https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?auto=format&fit=crop&w=1000&q=85')">
-</div>
-
-<div class="tour-body">
-<span class="tour-tag">پرطرفدار</span>
-<h3>تور استانبول</h3>
-<p>۵ شب اقامت · هتل منتخب · ترانسفر</p>
-
-<div class="tour-footer">
-<span class="price">از ۲۴,۹۰۰,۰۰۰ تومان</span>
-<a href="#contact">جزئیات ←</a>
-</div>
-</div>
-
-</div>
-
-<div class="tour">
-
-<div class="tour-img"
-style="background-image:url('https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=1000&q=85')">
-</div>
-
-<div class="tour-body">
-<span class="tour-tag">پیشنهاد ویژه</span>
-<h3>تور دبی</h3>
-<p>۴ شب اقامت · هتل منتخب · ترانسفر</p>
-
-<div class="tour-footer">
-<span class="price">از ۳۵,۹۰۰,۰۰۰ تومان</span>
-<a href="#contact">جزئیات ←</a>
-</div>
-</div>
-
-</div>
-
-<div class="tour">
-
-<div class="tour-img"
-style="background-image:url('https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=1000&q=85')">
-</div>
-
-<div class="tour-body">
-<span class="tour-tag">اروپا</span>
-<h3>تور پاریس</h3>
-<p>۶ شب اقامت · برنامه گردش شهری</p>
-
-<div class="tour-footer">
-<span class="price">استعلام قیمت</span>
-<a href="#contact">جزئیات ←</a>
-</div>
-</div>
-
-</div>
-
-</div>
-</div>
-</section>
-
-<!-- SERVICES -->
-
-<section class="services" id="services">
-
-<div class="container">
-
-<div class="section-head">
-<div class="small">همراه شما در سفر</div>
-<h2>خدمات آسمان</h2>
-<p>از انتخاب مقصد تا بازگشت، کنار شما هستیم.</p>
-</div>
-
-<div class="service-grid">
-
-<div class="service">
-<div class="icon">✈</div>
-<h3>بلیط هواپیما</h3>
-<p>جستجو و رزرو بلیط پروازهای داخلی و خارجی.</p>
-</div>
-
-<div class="service">
-<div class="icon">🌍</div>
-<h3>تورهای مسافرتی</h3>
-<p>پیشنهاد تورهای متنوع برای مقصدهای محبوب.</p>
-</div>
-
-<div class="service">
-<div class="icon">🏨</div>
-<h3>رزرو هتل</h3>
-<p>انتخاب و رزرو اقامتگاه متناسب با نیاز شما.</p>
-</div>
-
-<div class="service">
-<div class="icon">🧭</div>
-<h3>مشاوره سفر</h3>
-<p>برای انتخاب مقصد و برنامه‌ریزی سفر راهنمای شما هستیم.</p>
-</div>
-
-</div>
-</div>
-</section>
-
-<!-- ABOUT -->
-
-<section id="about">
-
-<div class="container about">
-
-<div class="about-img"></div>
-
-<div class="about-text">
-
-<div class="small">درباره آسمان</div>
-
-<h2>سفر را از همین‌جا شروع کنید</h2>
-
-<p>
-ما در آسمان تلاش می‌کنیم برنامه‌ریزی سفر را ساده‌تر،
-شفاف‌تر و لذت‌بخش‌تر کنیم.
-</p>
-
-<p>
-هدف ما این است که شما با خیال راحت مقصد خود را انتخاب کنید
-و تجربه‌ای به‌یادماندنی از سفر داشته باشید.
-</p>
-
-<div class="stats">
-
-<div class="stat">
-<strong>+۱۰</strong>
-<span>سال تجربه</span>
-</div>
-
-<div class="stat">
-<strong>+۵۰</strong>
-<span>مقصد</span>
-</div>
-
-<div class="stat">
-<strong>+۱۰۰۰</strong>
-<span>مسافر</span>
-</div>
-
-</div>
-
-</div>
-
-</div>
-</section>
-
-<!-- CTA -->
-
-<section id="contact">
-
-<div class="container">
-
-<div class="cta">
-
-<h2>آماده شروع سفر هستید؟</h2>
-
-<p>
-مقصدتان را انتخاب کنید؛ بقیه مسیر را به آسمان بسپارید.
-</p>
-
-<a href="tel:+980000000000" class="btn btn-primary">
-تماس با آسمان
-</a>
-
-</div>
-
-</div>
-</section>
-
-</main>
-
-<!-- FOOTER -->
-
-<footer>
-
-<div class="container">
-
-<div class="footer-grid">
-
-<div class="footer-brand">
-
-<div class="logo">آسمان ✈</div>
-
-<p>
-آغاز یک سفر متفاوت؛ همراه شما برای تجربه‌ای بهتر از سفر.
-</p>
-
-</div>
-
-<div>
-<h3>دسترسی سریع</h3>
-<ul>
-<li><a href="#home">صفحه اصلی</a></li>
-<li><a href="#tours">تورهای ویژه</a></li>
-<li><a href="#destinations">مقاصد</a></li>
-</ul>
-</div>
-
-<div>
-<h3>خدمات</h3>
-<ul>
-<li>بلیط هواپیما</li>
-<li>تور مسافرتی</li>
-<li>رزرو هتل</li>
-<li>مشاوره سفر</li>
-</ul>
-</div>
-
-<div>
-<h3>تماس</h3>
-<ul>
-<li>تلفن: ۰۰۰۰ ۰۰۰ ۰۰۰۰</li>
-<li>ایمیل: info@example.com</li>
-<li>تهران، ایران</li>
-</ul>
-</div>
-
-</div>
-
-<div class="copyright">
-© 2026 آسمان — تمامی حقوق محفوظ است.
-</div>
-
-</div>
-
-</footer>
-
-<script>
-
-function searchTravel(){
-[9/27/2026 10:29 AM] Madrid: alert("در نسخه آزمایشی، جستجوی سفر آماده است. برای اتصال به سیستم رزرو می‌توانیم مرحله بعد این بخش را واقعی کنیم.");
-
-}
-
-</script>
-
+  <header class="site-header">
+    <nav class="nav container" aria-label="منوی اصلی">
+      <a class="brand" href="#home" aria-label="صفحه اصلی آسمان"><span class="brand-mark">✦</span>آژانس آسمان</a>
+      <button class="menu-toggle" type="button" aria-label="باز کردن منو" aria-expanded="false">☰</button>
+      <div class="nav-links" id="main-menu">
+        <a href="#home">خانه</a><a href="#destinations">مقصدها</a><a href="#tours">تورهای ویژه</a><a href="#services">خدمات</a><a href="#about">درباره ما</a><a href="#contact">تماس با ما</a>
+      </div>
+      <a class="btn btn-light" href="#contact">رزرو مشاوره</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <video class="hero-video" autoplay muted loop playsinline poster="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=2200&q=85" aria-hidden="true">
+        <source src="HERO.mp4" type="video/mp4">
+      </video>
+      <div class="container hero-content reveal">
+        <span class="eyebrow">آژانس مسافرتی آسمان</span>
+        <h1>جهان را با خاطره‌های تازه ببینید.</h1>
+        <p>از یک آخرهفته آرام تا سفری دوردست؛ همراه شما هستیم تا هر لحظه از سفر، ساده، مطمئن و فراموش‌نشدنی باشد.</p>
+        <div class="hero-actions"><a class="btn btn-primary" href="#tours">مشاهده تورها</a><a class="btn btn-light" href="#contact">برنامه‌ریزی سفر</a></div>
+      </div>
+    </section>
+
+    <div class="trust-bar container"><div class="trust-inner">
+      <div class="trust-item"><span class="icon">✦</span><div><strong>برنامه‌ریزی دقیق</strong>متناسب با سبک سفر شما</div></div>
+      <div class="trust-item"><span class="icon">⌁</span><div><strong>پشتیبانی همراه</strong>پیش و هنگام سفر</div></div>
+      <div class="trust-item"><span class="icon">✓</span><div><strong>انتخاب‌های معتبر</strong>اقامت و خدمات مطمئن</div></div>
+    </div></div>
+
+    <section class="section" id="destinations"><div class="container reveal">
+      <div class="section-head"><div><span class="eyebrow">برای کشف کردن</span><h2>مقصدهایی که دوست‌شان خواهید داشت</h2></div><p>انتخاب‌هایی برای دوست‌داران طبیعت، فرهنگ و تجربه‌های تازه.</p></div>
+      <div class="destinations">
+        <a class="destination" href="#contact"><img src="https://images.unsplash.com/photo-1528181304800-259b08848526?auto=format&fit=crop&w=900&q=85" alt="معبد و طبیعت سرسبز بالی"><div class="destination-content"><h3>بالی، اندونزی</h3><span>آرامش در قلب طبیعت</span></div></a>
+        <a class="destination" href="#contact"><img src="https://images.unsplash.com/photo-1544986581-efac024faf62?auto=format&fit=crop&w=900&q=85" alt="ساحل و دریا در مالدیو"><div class="destination-content"><h3>مالدیو</h3><span>آبیِ بی‌پایان اقیانوس</span></div></a>
+        <a class="destination" href="#contact"><img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=900&q=85" alt="نمای شهری دبی"><div class="destination-content"><h3>دبی، امارات</h3><span>شهری برای هر سلیقه</span></div></a>
+      </div>
+    </div></section>
+
+    <section class="section tours" id="tours"><div class="container reveal">
+      <div class="section-head"><div><span class="eyebrow">پیشنهادهای آسمان</span><h2>تورهای منتخب فصل</h2></div><a class="text-link" href="#contact">مشاهده همه تورها ←</a></div>
+      <div class="tour-grid">
+        <article class="tour-card"><img src="https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?auto=format&fit=crop&w=900&q=85" alt="کانال‌های آبی ونیز"><div class="tour-body"><span class="tag">تور اروپا</span><h3>ایتالیا، ونیز و رم</h3><div class="tour-meta">۷ شب و ۸ روز · اقامت چهار ستاره</div><div class="tour-footer"><div class="price">از <b>۶۸ میلیون</b> تومان</div><a class="text-link" href="#contact">جزئیات</a></div></div></article>
+        <article class="tour-card"><img src="https://images.unsplash.com/photo-1499856871958-5b9627545d1a?auto=format&fit=crop&w=900&q=85" alt="برج ایفل در پاریس"><div class="tour-body"><span class="tag">تور کلاسیک</span><h3>پاریس، شهر نور</h3><div class="tour-meta">۵ شب و ۶ روز · گشت شهری</div><div class="tour-footer"><div class="price">از <b>۵۲ میلیون</b> تومان</div><a class="text-link" href="#contact">جزئیات</a></div></div></article>
+        <article class="tour-card"><img src="https://images.unsplash.com/photo-1534274988757-a28bf1a57c17?auto=format&fit=crop&w=900&q=85" alt="نمای استانبول و تنگه بسفر"><div class="tour-body"><span class="tag">تور نزدیک</span><h3>استانبول، ترکیه</h3><div class="tour-meta">۴ شب و ۵ روز · پرواز مستقیم</div><div class="tour-footer"><div class="price">از <b>۲۹ میلیون</b> تومان</div><a class="text-link" href="#contact">جزئیات</a></div></div></article>
+      </div>
+    </div></section>
+
+    <section class="section" id="services"><div class="container reveal">
+      <div class="section-head"><div><span class="eyebrow">همه‌چیز برای سفر</span><h2>خدماتی با خیال آسوده</h2></div><p>جزئیات سفر را به ما بسپارید و تمرکزتان را روی لذت مسیر بگذارید.</p></div>
+      <div class="services">
+        <article class="service"><span class="icon">✈</span><h3>رزرو پرواز</h3><p>انتخاب پروازهای داخلی و خارجی متناسب با برنامه شما.</p></article>
+        <article class="service"><span class="icon">⌂</span><h3>رزرو اقامت</h3><p>هتل‌ها و اقامتگاه‌های منتخب در بهترین موقعیت‌ها.</p></article>
+        <article class="service"><span class="icon">▣</span><h3>خدمات ویزا</h3><p>راهنمایی مرحله‌به‌مرحله برای آماده‌سازی مدارک سفر.</p></article>
+        <article class="service"><span class="icon">♡</span><h3>سفر اختصاصی</h3><p>برنامه‌ای شخصی‌سازی‌شده برای سفرهای دونفره و خانوادگی.</p></article>
+      </div>
+    </div></section>
+
+    <section class="section about" id="about"><div class="container about-grid reveal">
+      <div class="about-image" role="img" aria-label="مسافر در حال تماشای منظره کوهستانی"></div>
+      <div><span class="eyebrow">داستان آسمان</span><h2>سفر خوب، با یک همراه خوب شروع می‌شود.</h2><p>در آژانس آسمان، سفر را فقط رزرو بلیت و هتل نمی‌دانیم. ما به تجربه‌ای فکر می‌کنیم که از لحظه انتخاب مقصد تا بازگشت به خانه، با آرامش و شوق همراه شما باشد.</p><ul class="checks"><li>مشاوره صادقانه</li><li>برنامه‌ریزی منعطف</li><li>گزینه‌های متنوع</li><li>پاسخ‌گویی سریع</li></ul></div>
+    </div></section>
+
+    <section class="section" id="contact"><div class="container reveal">
+      <div class="section-head"><div><span class="eyebrow">آماده سفر هستید؟</span><h2>با آسمان در تماس باشید</h2></div><p>برای دریافت مشاوره و انتخاب بهترین برنامه سفر، همین حالا پیام بدهید.</p></div>
+      <div class="contact-grid">
+        <aside class="contact-info"><h2>سفر بعدی‌تان را شروع کنیم.</h2><p>ما برای پاسخ به پرسش‌ها و ساختن یک برنامه مناسب کنار شما هستیم.</p>
+          <div class="contact-list">
+            <a class="contact-row" href="tel:+989374863263"><span class="icon">☎</span><span><small>تماس تلفنی</small>09374863263</span></a>
+            <a class="contact-row" href="mailto:rastmostafa3000@gmail.com"><span class="icon">✉</span><span><small>ایمیل</small>rastmostafa3000@gmail.com</span></a>
+          </div>
+          <div class="contact-actions"><a class="btn btn-primary" href="tel:+989374863263">☎ تماس مستقیم</a><a class="btn whatsapp" href="https://wa.me/989374863263" target="_blank" rel="noopener">واتساپ</a></div>
+        </aside>
+        <form class="contact-form" id="consultation-form"><h3>درخواست مشاوره</h3><div class="form-grid"><label>نام و نام خانوادگی<input name="name" autocomplete="name" required></label><label>شماره تماس<input name="phone" type="tel" inputmode="tel" autocomplete="tel" required></label><label class="field-full">مقصد یا توضیحات سفر<textarea name="message" placeholder="مثلاً تور استانبول برای دو نفر..."></textarea></label></div><button class="btn btn-outline" type="submit">ارسال درخواست</button></form>
+      </div>
+    </div></section>
+  </main>
+  <footer><div class="container footer-inner"><span>© ۱۴۰۵ آژانس مسافرتی آسمان. تمامی حقوق محفوظ است.</span><div class="footer-links"><a href="#home">خانه</a><a href="#tours">تورهای ویژه</a><a href="#contact">تماس</a></div></div></footer>
+  <script>
+    const menuButton = document.querySelector('.menu-toggle');
+    const menu = document.querySelector('.nav-links');
+    menuButton.addEventListener('click', () => { const open = menu.classList.toggle('open'); menuButton.setAttribute('aria-expanded', open); });
+    document.querySelectorAll('.nav-links a').forEach(link => link.addEventListener('click', () => { menu.classList.remove('open'); menuButton.setAttribute('aria-expanded', 'false'); }));
+    const observer = new IntersectionObserver(entries => entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); } }), { threshold: .12 });
+    document.querySelectorAll('.reveal').forEach(element => observer.observe(element));
+    document.getElementById('consultation-form').addEventListener('submit', event => {
+      event.preventDefault();
+      const form = event.currentTarget;
+      const data = new FormData(form);
+      const subject = encodeURIComponent(`درخواست مشاوره سفر - ${data.get('name')}`);
+      const body = encodeURIComponent(`نام: ${data.get('name')}\nشماره تماس: ${data.get('phone')}\n\nتوضیحات سفر:\n${data.get('message') || '-'}`);
+      window.location.href = `mailto:rastmostafa3000@gmail.com?subject=${subject}&body=${body}`;
+    });
+  </script>
 </body>
 </html>
